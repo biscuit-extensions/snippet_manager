@@ -1,7 +1,19 @@
 [extension]
 id = "snippet_manager"
 name = "Snippet Manager"
-version = "0.1.0"
-description = "Snippet Manager extension for Biscuit"
-author = "biscuit-extensions"
+version = "0.2.0"
+description = "Custom code snippet repository, keyword prefix expansion engine, and tabstop placeholder navigator"
+author = "tomlin7"
 icon = "icon.png"
+
+[dependencies]
+python = []
+tools = []
+
+[contributes]
+commands = [
+    { id = "snippets.insert", title = "Snippets: Insert Snippet", category = "Snippets" },
+    { id = "snippets.create", title = "Snippets: Create New Snippet", category = "Snippets" },
+    { id = "snippets.list", title = "Snippets: List Available Snippets", category = "Snippets" },
+    { id = "snippets.expand", title = "Snippets: Expand Snippet at Cursor", category = "Snippets" }
+]

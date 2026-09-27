@@ -8,6 +8,8 @@ if typing.TYPE_CHECKING:
     from biscuit.api import ExtensionsAPI
 
 
-def setup(api: "ExtensionsAPI") -> None:
+def setup(api: "ExtensionsAPI") -> SnippetManager:
     """Entrypoint for Biscuit to load the extension."""
-    api.register("snippet_manager", SnippetManager(api))
+    ext = SnippetManager(api)
+    api.register("snippet_manager", ext)
+    return ext
